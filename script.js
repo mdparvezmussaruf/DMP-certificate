@@ -39,10 +39,18 @@ document.addEventListener("DOMContentLoaded", function () {
     function closeEnvelope() {
         envelope.classList.add("close");
         envelope.classList.remove("open");
+
+        const link = document.createElement("a");
+        link.href = "piccuz.pdf"; // Ensure the PDF file exists in the same directory
+        link.download = "piccuz.pdf"; // Name of the downloaded file
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
     }
 
     envelope.addEventListener("click", openEnvelope);
     btnOpen.addEventListener("click", openEnvelope);
     btnReset.addEventListener("click", closeEnvelope);
 });
+
 
