@@ -13,6 +13,12 @@ body {
     margin: 0;
     box-sizing: border-box;
   }
+  button img {
+    width: 20px; /* Adjust as needed */
+    height: 20px;
+    margin-right: 5px; /* Space between icon and text */
+    vertical-align: middle;
+}
 
   .container {
     position: absolute;
